@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KunieBLOX — Roblox Executor Hub</title>
+  <meta name="description" content="Real-time status, UNC/sUNC coverage, and detailed specs for every Roblox executor." />
+  <meta name="theme-color" content="#fdf2f5" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── DASHBOARD ── -->
+  <div id="dashboard-view">
+    <header id="main-header">
+      <div class="header-inner">
+        <a href="#/" class="brand">Kunie<span>BLOX</span></a>
+        <div class="search-wrap">
+          <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="search-input" placeholder="Search executors…" autocomplete="off" spellcheck="false" />
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="stats-row" id="stats-bar"></div>
+      <div class="filter-row" id="filter-bar"></div>
+      <div class="grid" id="executor-grid"></div>
+      <div class="empty hidden" id="empty-state">
+        <p>No results found.</p>
+        <button id="btn-clear-filters">Clear filters</button>
+      </div>
+      <div class="loader-wrap" id="loading-state">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DETAIL ── -->
+  <div id="detail-view" class="hidden">
+    <div class="detail-top">
+      <button class="back-link" id="btn-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back
+      </button>
+    </div>
+    <div class="detail-grid">
+      <aside id="detail-sidebar"></aside>
+      <main id="detail-content"></main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
